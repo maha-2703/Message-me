@@ -2,6 +2,8 @@
 <html>
   <head>
     <title><%= content_for(:title) || "Message Me" %></title>
+    <%= favicon_link_tag 'message-solid.png' %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Message Me">
@@ -24,6 +26,22 @@
   </head>
 
   <body>
+  <div class="ui small inverted menu">
+    <div class="ui container">
+        <%= render 'layouts/navigation' %>
+        
+    </div>
+   </div>
+<div class="ui container">
+
+  <%= render 'layouts/messages' %>
+      
+    
     <%= yield %>
+</div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
   </body>
 </html>
+
+
